@@ -15,7 +15,7 @@ export class HtmlParser {
   private static contentTags: string[] = [];
   private static removedTags: string[] = [];
   private static dirty = true;
-  private static directoryPath: string = process.cwd();
+  private static directoryPath: string = typeof process !== 'undefined' && typeof process.cwd === 'function' ? process.cwd() : '/';
 
   static setDirectoryPath(dirPath: string): void {
     this.directoryPath = dirPath;

@@ -12,7 +12,7 @@ import { FileSystemConfig } from '../io/FileSystemConfig';
  * Uses FileSystemConfig.instance for file I/O.
  */
 export class DictionaryConfigurationHelper {
-  private static directoryPath: string = process.cwd();
+  private static directoryPath: string = typeof process !== 'undefined' && typeof process.cwd === 'function' ? process.cwd() : '/';
   private static thuatToanNhan: string = '';
 
   private static configCache: Map<string, string> | null = null;

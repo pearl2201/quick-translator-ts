@@ -9,7 +9,8 @@
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "example": "npx tsx examples/example.ts"
   },
   "dependencies": {
     "iconv-lite": "^0.6.3"
